@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.laboratorio.pbapp.view.NovaVendaActivity">
+
+    <!-- Título da tela -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Nova Venda"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Cliente -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cliente"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinnerCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+    <!-- Produto -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Produto"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinnerProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+    <EditText
+        android:id="@+id/editTextQuantidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:padding="16dp" />
+
+    <!-- Botão de adicionar ao carrinho -->
+    <Button
+        android:id="@+id/buttonAdicionarAoCarrinhoNovaVenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar ao Carrinho"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@color/white"/>
+
+    <!-- Carrinho -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Carrinho"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Data -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonSelecionarData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:hint="Selecione a data"
+        android:inputType="date"
+        android:padding="12dp" />
+
+    <!-- Valor total -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor total"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextValorTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="0123456789.,"
+        android:hint="0,00"
+        android:inputType="numberDecimal"/>
+
+    <!-- Botão de salvar -->
+    <Button
+        android:id="@+id/buttonSalvarNovaVenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_500"
+        android:text="Salvar"
+        android:textColor="@color/white" />
+
+    <!-- Linha com menu de rodapé -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:itemIconTint="@color/bottom_nav_selector"
+            app:itemTextColor="@color/bottom_nav_selector"
+            app:menu="@menu/bottom_navigation_menu" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

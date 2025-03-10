@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.laboratorio.pbapp.view.NovoProdutoActivity">
+
+    <!-- Título da tela -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Novo Produto"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Nome do produto -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Produto"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextNomeDoProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Um nome curto de preferência"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <!-- Descrição -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descreva as características do produto"
+        android:inputType="text"
+        android:padding="24dp" />
+
+    <!-- Custo Unitário -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custo Unitário"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextCustoUnitario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="O valor de custo de cada unidade"
+        android:inputType="numberDecimal"
+        android:digits="0123456789.,"
+        android:padding="12dp" />
+
+    <!-- Quantidade em estoque -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade em estoque"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextQuantidadeEmEstoque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Unidades disponíveis em estoque"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:padding="12dp" />
+
+    <!-- Valor de Venda -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor de venda"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextValorDeVenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Preço de venda do produto"
+        android:inputType="numberDecimal"
+        android:digits="0123456789.,"
+        android:padding="12dp" />
+
+    <!-- Margem de lucro -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Margem de lucro"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextMargemDeLucro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:digits="0123456789.,"
+        android:padding="12dp"
+        android:focusable="false"
+        android:clickable="false" />
+
+    <!-- Lucro -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lucro"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextLucro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:digits="0123456789.,"
+        android:padding="12dp"
+        android:focusable="false"
+        android:clickable="false" />
+
+    <!-- Botão de salvar -->
+    <Button
+        android:id="@+id/buttonSalvarNovoProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp" />
+
+    <!-- Linha com menu de rodapé -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:itemIconTint="@color/bottom_nav_selector"
+            app:itemTextColor="@color/bottom_nav_selector"
+            app:menu="@menu/bottom_navigation_menu" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

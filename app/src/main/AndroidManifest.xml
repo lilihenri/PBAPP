@@ -1,0 +1,26 @@
+git config --global user.name "Eliane Henrique"
+    git config --global user.email "lilihenrisil@icloud.com"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.laboratorio.pbapp">
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/Theme.PBApp"
+        android:supportsRtl="true"
+        android:label="PBApp">
+
+        <activity android:name=".view.EstoqueActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".view.ClientesActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
+        <activity android:name=".view.NovaVendaActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
+        <activity android:name=".view.NovoClienteActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
+        <activity android:name=".view.NovoProdutoActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
+        <activity android:name=".view.RelatorioActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
+        <activity android:name=".view.VendasActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
+    </application>
+</manifest>
