@@ -27,7 +27,7 @@
 
         <!-- Botão de adicionar -->
         <ImageButton
-            android:id="@+id/buttonAdicionarClientes"
+            android:id="@+id/btnAdicionarClientes"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@drawable/icadd32px"
@@ -37,7 +37,7 @@
 
     <!-- Campo de busca -->
     <EditText
-        android:id="@+id/editTextBuscaClientes"
+        android:id="@+id/etBuscaClientes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Buscar cliente cadastrado"

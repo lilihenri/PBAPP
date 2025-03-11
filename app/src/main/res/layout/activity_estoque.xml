@@ -27,7 +27,7 @@
 
         <!-- Botão de adicionar -->
         <ImageButton
-            android:id="@+id/buttonAdicionarEstoque"
+            android:id="@+id/btnAdicionarEstoque"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@drawable/icadd32px"
@@ -37,12 +37,30 @@
 
     <!-- Campo de busca -->
     <EditText
-        android:id="@+id/editTextBuscaEstoque"
+        android:id="@+id/etBuscaEstoque"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Buscar produtos em estoque"
         android:inputType="text"
         android:padding="12dp" />
+
+    <!-- RecyclerView para os produtos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <!-- Mensagem caso não tenha produtos -->
+    <TextView
+        android:id="@+id/tvMensagemSemProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nenhum produto cadastrado"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="16dp" />
 
     <!-- Linha com menu de rodapé -->
     <androidx.coordinatorlayout.widget.CoordinatorLayout

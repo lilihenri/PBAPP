@@ -5,28 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.laboratorio.pbapp.view.NovoProdutoActivity">
+    tools:context="com.laboratorio.pbapp.view.ProdutoActivity">
 
     <!-- Título da tela -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Novo Produto"
-        android:textSize="24sp"
+        android:text="Produto"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp" />
+
+    <!-- Nome -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Produto Nº #"
+        android:textSize="24dp"
+        android:textStyle="bold" />
 
     <!-- Nome do produto -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nome do Produto"
-        android:textSize="16sp"
+        android:text="Nome do produto"
+        android:textSize="16dp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etNomeDoProduto"
+        android:id="@+id/etNomeDoProdutoEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Um nome curto de preferência"
@@ -39,32 +47,30 @@
         android:layout_height="wrap_content"
         android:text="Descrição"
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp" />
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etDescricao"
+        android:id="@+id/etDescricaoEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Descreva as características do produto"
         android:inputType="text"
-        android:padding="24dp" />
+        android:padding="12dp" />
 
     <!-- Custo Unitário -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Custo Unitário"
+        android:text="Custo unitário"
         android:textSize="16sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etCustoUnitario"
+        android:id="@+id/etCustoUnitarioEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="O valor de custo de cada unidade"
-        android:inputType="numberDecimal"
-        android:digits="0123456789.,"
+        android:inputType="text"
         android:padding="12dp" />
 
     <!-- Quantidade em estoque -->
@@ -76,24 +82,23 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etQuantidadeEmEstoque"
+        android:id="@+id/etQuantidadeEmEstoqueEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Unidades disponíveis em estoque"
-        android:inputType="number"
-        android:digits="0123456789"
+        android:inputType="text"
         android:padding="12dp" />
 
-    <!-- Valor de Venda -->
+    <!-- Valor da venda -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Valor de venda"
+        android:text="Valor da venda"
         android:textSize="16sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etValorDeVenda"
+        android:id="@+id/etValorDeVendaEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Preço de venda do produto"
@@ -110,7 +115,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etMargemDeLucro"
+        android:id="@+id/etMargemDeLucroEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -128,7 +133,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etLucro"
+        android:id="@+id/etLucroEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -138,16 +143,17 @@
         android:clickable="false" />
 
     <!-- Botão de salvar -->
-    <Button
-        android:id="@+id/btnSalvarNovoProduto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Salvar"
-        android:backgroundTint="@color/purple_500"
-        android:textColor="@color/white"
-        android:layout_marginTop="24dp" />
 
     <!-- Linha com menu de rodapé -->
+    <Button
+        android:id="@+id/btnSalvarNovoCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Salvar"
+        android:textColor="@color/white" />
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

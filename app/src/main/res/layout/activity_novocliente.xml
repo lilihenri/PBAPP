@@ -83,7 +83,7 @@
 
     <!-- Botão de salvar -->
     <Button
-        android:id="@+id/buttonSalvarNovoCliente"
+        android:id="@+id/btnSalvarNovoCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Emitir Relatório"

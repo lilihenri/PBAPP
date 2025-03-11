@@ -1,5 +1,3 @@
-git config --global user.name "Eliane Henrique"
-    git config --global user.email "lilihenrisil@icloud.com"
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.laboratorio.pbapp">
 
@@ -20,6 +18,7 @@ git config --global user.name "Eliane Henrique"
         <activity android:name=".view.NovaVendaActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
         <activity android:name=".view.NovoClienteActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
         <activity android:name=".view.NovoProdutoActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
+        <activity android:name=".view.ProdutoActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
         <activity android:name=".view.RelatorioActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
         <activity android:name=".view.VendasActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
     </application>
