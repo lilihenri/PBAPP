@@ -17,7 +17,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp" />
 
-    <!-- Nome do produto -->
+    <!-- Nome do produtoModel -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

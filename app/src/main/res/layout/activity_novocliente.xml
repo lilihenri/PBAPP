@@ -39,7 +39,8 @@
         android:layout_height="wrap_content"
         android:text="CPF/CNPJ"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
 
     <EditText
         android:id="@+id/editTextCPFCNPJ"
@@ -55,7 +56,8 @@
         android:layout_height="wrap_content"
         android:text="Endereço"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
 
     <EditText
         android:id="@+id/editTextEndereço"
@@ -71,7 +73,8 @@
         android:layout_height="wrap_content"
         android:text="Telefone"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
 
     <EditText
         android:id="@+id/editTelefone"
@@ -86,7 +89,7 @@
         android:id="@+id/btnSalvarNovoCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Emitir Relatório"
+        android:text="Salvar"
         android:backgroundTint="@color/purple_500"
         android:textColor="@color/white"
         android:layout_marginTop="24dp" />

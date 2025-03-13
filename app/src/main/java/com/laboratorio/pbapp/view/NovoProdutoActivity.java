@@ -13,8 +13,8 @@ import com.laboratorio.pbapp.util.ProdutoTextWatcherUtil;
 
 public class NovoProdutoActivity extends AppCompatActivity {
 
-    private EditText etNomeDoProduto, etDescricao, etCustoUnitario, etQuantidadeEmEstoque, etValorDeVenda, etMargemDeLucro, etLucro;
     private Button btnSalvarNovoProduto;
+    private EditText etNomeDoProduto, etDescricao, etCustoUnitario, etQuantidadeEmEstoque, etValorDeVenda, etMargemDeLucro, etLucro;
     private ProdutoController produtoController;
 
     @Override

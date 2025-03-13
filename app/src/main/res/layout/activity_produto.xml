@@ -17,15 +17,15 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp" />
 
-    <!-- Nome -->
+    <!-- Nome do produto -->
     <TextView
+        android:id="@+id/tvProdutoId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Produto Nº #"
         android:textSize="24dp"
         android:textStyle="bold" />
 
-    <!-- Nome do produto -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -143,10 +143,8 @@
         android:clickable="false" />
 
     <!-- Botão de salvar -->
-
-    <!-- Linha com menu de rodapé -->
     <Button
-        android:id="@+id/btnSalvarNovoCliente"
+        android:id="@+id/btnSalvarProdutoEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -154,6 +152,17 @@
         android:text="Salvar"
         android:textColor="@color/white" />
 
+    <!-- Botão de excluir -->
+    <Button
+        android:id="@+id/btnExcluirProdutoEdição"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Excluir"
+        android:textColor="@color/white" />
+
+    <!-- Linha com menu de rodapé -->
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
