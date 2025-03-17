@@ -44,19 +44,19 @@
         android:inputType="text"
         android:padding="12dp" />
 
-    <!-- RecyclerView para os produtoModels -->
+    <!-- RecyclerView para os produto -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewProdutos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp" />
 
-    <!-- Mensagem caso não tenha produtoModels -->
+    <!-- Mensagem caso não tenha produto -->
     <TextView
         android:id="@+id/tvMensagemSemProdutos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nenhum produtoModel cadastrado"
+        android:text="Nenhum produto cadastrado"
         android:textSize="16sp"
         android:gravity="center"
         android:visibility="gone"

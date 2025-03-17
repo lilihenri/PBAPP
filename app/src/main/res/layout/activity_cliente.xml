@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.laboratorio.pbapp.view.ProdutoActivity">
+    tools:context="com.laboratorio.pbapp.view.ClienteActivity">
 
     <!-- Título da tela -->
     <TextView
@@ -13,148 +13,99 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Produto"
+        android:text="Cliente"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
-    <!-- Nome do produto -->
+    <!-- Nome do cliente -->
     <TextView
-        android:id="@+id/tvProdutoId"
+        android:id="@+id/tvClienteId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Produto Nº #"
+        android:text="Cliente Nº #"
         android:textSize="24dp"
         android:textStyle="bold" />
 
+    <!-- Nome -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nome do produto"
-        android:textSize="16dp"
+        android:text="Nome"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etNomeDoProdutoEdição"
+        android:id="@+id/etNomeDoClienteEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Um nome curto de preferência"
+        android:hint="Nome completo do cliente"
         android:inputType="text"
         android:padding="12dp" />
 
-    <!-- Descrição -->
+    <!-- CPF/CNPJ -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Descrição"
+        android:text="CPF/CNPJ"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
 
     <EditText
-        android:id="@+id/etDescricaoEdição"
+        android:id="@+id/etCPFCNPJEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descreva as características do produto"
+        android:hint="CPF ou CNPJ do cliente (opcional)"
         android:inputType="text"
         android:padding="12dp" />
 
-    <!-- Custo Unitário -->
+    <!-- Endereço -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Custo unitário"
+        android:text="Endereço"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
 
     <EditText
-        android:id="@+id/etCustoUnitarioEdição"
+        android:id="@+id/etEndereçoEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="O valor de custo de cada unidade"
+        android:hint="Endereço completo (opcional)"
         android:inputType="text"
         android:padding="12dp" />
 
-    <!-- Quantidade em estoque -->
+    <!-- Telefone -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quantidade em estoque"
+        android:text="Telefone"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
 
     <EditText
-        android:id="@+id/etQuantidadeEmEstoqueEdição"
+        android:id="@+id/etTelefoneEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Unidades disponíveis em estoque"
+        android:hint="Número para contato (opcional)"
         android:inputType="text"
         android:padding="12dp" />
-
-    <!-- Valor da venda -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Valor da venda"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/etValorDeVendaEdição"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Preço de venda do produto"
-        android:inputType="numberDecimal"
-        android:digits="0123456789.,"
-        android:padding="12dp" />
-
-    <!-- Margem de lucro -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Margem de lucro"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/etMargemDeLucroEdição"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:digits="0123456789.,"
-        android:padding="12dp"
-        android:focusable="false"
-        android:clickable="false" />
-
-    <!-- Lucro -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lucro"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/etLucroEdição"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:digits="0123456789.,"
-        android:padding="12dp"
-        android:focusable="false"
-        android:clickable="false" />
 
     <!-- Botão de salvar -->
     <Button
-        android:id="@+id/btnSalvarProdutoEdição"
+        android:id="@+id/btnSalvarClienteEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/purple_500"
         android:text="Salvar"
-        android:textColor="@color/white" />
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp" />
 
     <!-- Botão de excluir -->
     <Button
-        android:id="@+id/btnExcluirProdutoEdição"
+        android:id="@+id/btnExcluirClienteEdição"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"

@@ -4,10 +4,13 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.laboratorio.pbapp.R;
+import com.laboratorio.pbapp.adapter.interfaces.OnItemClickListener;
 import com.laboratorio.pbapp.model.ProdutoModel;
 import java.util.Locale;
 
 public class ProdutoViewHolder extends RecyclerView.ViewHolder {
+
+    // Declara variáveis de Classe
     private final TextView tvNomeProduto, tvDescricaoProduto, tvQuantidadeEstoque, tvPrecoVenda, tvCusto, tvLucroProduto;
 
     public ProdutoViewHolder(View itemView) {

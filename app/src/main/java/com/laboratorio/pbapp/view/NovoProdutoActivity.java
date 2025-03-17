@@ -9,10 +9,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.laboratorio.pbapp.R;
 import com.laboratorio.pbapp.controller.ProdutoController;
 import com.laboratorio.pbapp.util.BottomNavigationUtil;
-import com.laboratorio.pbapp.util.ProdutoTextWatcherUtil;
+import com.laboratorio.pbapp.util.TextWatcherUtil.ProdutoTextWatcherUtil;
 
 public class NovoProdutoActivity extends AppCompatActivity {
 
+    // Declara variáveis de Classe
     private Button btnSalvarNovoProduto;
     private EditText etNomeDoProduto, etDescricao, etCustoUnitario, etQuantidadeEmEstoque, etValorDeVenda, etMargemDeLucro, etLucro;
     private ProdutoController produtoController;

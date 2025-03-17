@@ -1,6 +1,5 @@
 package com.laboratorio.pbapp.view;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -15,14 +14,15 @@ import com.laboratorio.pbapp.controller.ProdutoController;
 import com.laboratorio.pbapp.model.ProdutoModel;
 import com.laboratorio.pbapp.util.BottomNavigationUtil;
 import com.laboratorio.pbapp.util.ProdutoUtil;
-import com.laboratorio.pbapp.util.ProdutoTextWatcherUtil;
+import com.laboratorio.pbapp.util.TextWatcherUtil.ProdutoTextWatcherUtil;
 
 public class ProdutoActivity extends AppCompatActivity {
 
+    // Declara variáveis de Classe
     private ProdutoController produtoController;
     private EditText etNomeProduto, etDescricao, etCustoUnitario, etQuantidadeEmEstoque, etValorDeVenda, etLucro, etMargemDeLucro;
     private Button btnSalvarProduto, btnExcluirProduto;
-    private int produtoId;
+    private int idProduto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,8 @@ public class ProdutoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_produto);
 
         // Recuperar ID do produto da Intent
-        produtoId = getIntent().getIntExtra("produto_id", -1);
-        if (produtoId == -1) {
+        idProduto = getIntent().getIntExtra("produto_id", -1);
+        if (idProduto == -1) {
             Toast.makeText(this, "Erro ao carregar produto", Toast.LENGTH_SHORT).show();
             finish();
             return;
@@ -51,7 +51,7 @@ public class ProdutoActivity extends AppCompatActivity {
         produtoController = new ProdutoController(this);
 
         // Buscar os dados do produto no banco e preencher os campos
-        carregarProduto(produtoId);
+        carregarProduto(idProduto);
 
         // Adiciona o TextWatcher para atualizar lucro e margem automaticamente
         ProdutoTextWatcherUtil textWatcher = new ProdutoTextWatcherUtil(etCustoUnitario, etValorDeVenda, etLucro, etMargemDeLucro);
@@ -69,21 +69,21 @@ public class ProdutoActivity extends AppCompatActivity {
         BottomNavigationUtil.configurarBottomNavigation(bottomNavigationView, R.id.nav_estoque, this);
     }
 
-    private void carregarProduto(int produtoId) {
-        ProdutoModel produto = produtoController.buscarProdutoPorId(produtoId);
-        if (produto != null) {
+    private void carregarProduto(int idProduto) {
+        ProdutoModel produtoModel = produtoController.buscarProdutoPorId(idProduto);
+        if (produtoModel != null) {
             TextView tvProdutoId = findViewById(R.id.tvProdutoId);
-            tvProdutoId.setText("Produto Nº #" + produtoId);
+            tvProdutoId.setText("Produto Nº #" + idProduto);
 
-            etNomeProduto.setText(produto.getNomeProduto());
-            etDescricao.setText(produto.getDescricaoProduto());
-            etCustoUnitario.setText(String.valueOf(produto.getCustoUnitario()));
-            etQuantidadeEmEstoque.setText(String.valueOf(produto.getQuantidadeEstoque()));
-            etValorDeVenda.setText(String.valueOf(produto.getValorVenda()));
+            etNomeProduto.setText(produtoModel.getNomeProduto());
+            etDescricao.setText(produtoModel.getDescricaoProduto());
+            etCustoUnitario.setText(String.valueOf(produtoModel.getCustoUnitario()));
+            etQuantidadeEmEstoque.setText(String.valueOf(produtoModel.getQuantidadeEstoque()));
+            etValorDeVenda.setText(String.valueOf(produtoModel.getValorVenda()));
 
             // Calcular Lucro e Margem automaticamente
-            double lucro = ProdutoUtil.calcularLucro(produto.getCustoUnitario(), produto.getValorVenda());
-            double margem = ProdutoUtil.calcularMargem(lucro, produto.getValorVenda());
+            double lucro = ProdutoUtil.calcularLucro(produtoModel.getCustoUnitario(), produtoModel.getValorVenda());
+            double margem = ProdutoUtil.calcularMargem(lucro, produtoModel.getValorVenda());
 
             etLucro.setText(ProdutoUtil.formatarDouble(lucro));
             etMargemDeLucro.setText(ProdutoUtil.formatarMargem(margem));
@@ -107,11 +107,10 @@ public class ProdutoActivity extends AppCompatActivity {
             int quantidadeEmEstoque = Integer.parseInt(strQuantidadeEmEstoque);
             double valorDeVenda = Double.parseDouble(strValorDeVenda);
 
-            boolean sucesso = produtoController.atualizarProduto(produtoId, nomeProduto, descricao, custoUnitario, quantidadeEmEstoque, valorDeVenda);
+            boolean sucesso = produtoController.atualizarProduto(idProduto, nomeProduto, descricao, custoUnitario, quantidadeEmEstoque, valorDeVenda);
 
             if (sucesso) {
                 Toast.makeText(this, "Produto atualizado com sucesso!", Toast.LENGTH_SHORT).show();
-                // Retorna para EstoqueActivity e atualiza a lista
                 Intent intent = new Intent(this, EstoqueActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
@@ -134,7 +133,7 @@ public class ProdutoActivity extends AppCompatActivity {
     }
 
     private void excluirProduto() {
-        boolean sucesso = produtoController.excluirProduto(produtoId);
+        boolean sucesso = produtoController.excluirProduto(idProduto);
         if (sucesso) {
             Toast.makeText(this, "Produto excluído com sucesso!", Toast.LENGTH_SHORT).show();
             // Retorna para EstoqueActivity e atualiza a lista

@@ -1,3 +1,6 @@
+git add .
+    git commit -m "Atualização de projeto para cadastro de novos clientes; exibição dos clientes em ordem alfabética na tela clientes; realização de updade de cadastro do cliente existente na base de dados; busca de clientes por nome na tela clientes."
+    git push PBAPP main
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.laboratorio.pbapp">
 
@@ -14,6 +17,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".view.ClienteActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
         <activity android:name=".view.ClientesActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
         <activity android:name=".view.NovaVendaActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>
         <activity android:name=".view.NovoClienteActivity" android:exported="true" android:theme="@style/Theme.PBApp"/>

@@ -7,18 +7,20 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.laboratorio.pbapp.R;
+import com.laboratorio.pbapp.adapter.interfaces.OnItemClickListener;
 import com.laboratorio.pbapp.model.ProdutoModel;
-
 import java.util.List;
 
 public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoViewHolder> {
+
+    // Declara variáveis de Classe
     private final Context context;
-    private final List<ProdutoModel> produtoModels;
+    private final List<ProdutoModel> produtosModel;
     private final OnItemClickListener listener;
 
-    public ProdutoAdapter(Context context, List<ProdutoModel> produtoModels, OnItemClickListener listener) {
+    public ProdutoAdapter(Context context, List<ProdutoModel> produtosModel, OnItemClickListener listener) {
         this.context = context;
-        this.produtoModels = produtoModels;
+        this.produtosModel = produtosModel;
         this.listener = listener;
     }
 
@@ -31,19 +33,19 @@ public class ProdutoAdapter extends RecyclerView.Adapter<ProdutoViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ProdutoViewHolder holder, int position) {
-        ProdutoModel produtoModel = produtoModels.get(position);
+        ProdutoModel produtoModel = produtosModel.get(position);
         holder.bind(produtoModel, listener);
     }
 
     public void atualizarLista(List<ProdutoModel> novaLista) {
-        this.produtoModels.clear();
-        this.produtoModels.addAll(novaLista);
+        this.produtosModel.clear();
+        this.produtosModel.addAll(novaLista);
         notifyDataSetChanged();
     }
 
     @Override
     public int getItemCount() {
-        return produtoModels.size();
+        return produtosModel.size();
     }
 
 }

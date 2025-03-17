@@ -26,7 +26,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextNome"
+        android:id="@+id/etNomeCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nome completo do cliente"
@@ -43,7 +43,7 @@
         android:layout_marginTop="10dp" />
 
     <EditText
-        android:id="@+id/editTextCPFCNPJ"
+        android:id="@+id/etCPFCNPJ"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="CPF ou CNPJ do cliente (opcional)"
@@ -60,7 +60,7 @@
         android:layout_marginTop="10dp" />
 
     <EditText
-        android:id="@+id/editTextEndereço"
+        android:id="@+id/etEndereço"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Endereço completo (opcional)"
@@ -77,7 +77,7 @@
         android:layout_marginTop="10dp" />
 
     <EditText
-        android:id="@+id/editTelefone"
+        android:id="@+id/etTelefone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Número para contato (opcional)"

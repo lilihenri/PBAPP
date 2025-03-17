@@ -1,27 +1,12 @@
-import androidx.annotation.NonNull;
-
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
+package com.laboratorio.pbapp.util;
 
 public class TelefoneUtil {
 
-    private static final String TELEFONE_REGEX = "^(\\(\\d{2}\\))\\d{4,5}-\\d{4}$";
-
-    public static boolean isTelefoneValido(String telefone) {
-        if (telefone == null || telefone.isEmpty()) return false;
-
-        Pattern pattern = Pattern.compile(TELEFONE_REGEX);
-        Matcher matcher = pattern.matcher(telefone);
-        return matcher.matches();
-    }
-
     public static String formatarTelefone(String telefone) {
-        if (telefone == null) return null;
+        if (telefone == null || telefone.isEmpty()) return "";
 
-        // Remove caracteres que não sejam números
-        telefone = telefone.replaceAll("[^\\d]", "");
+        telefone = removerNaoNumericos(telefone);
 
-        // Verifica se há um zero no início e remove
         if (telefone.startsWith("0")) {
             telefone = telefone.substring(1);
         }
@@ -37,8 +22,13 @@ public class TelefoneUtil {
                     telefone.substring(2, 7),
                     telefone.substring(7, 11));
         } else {
-            return null;
+            return "";
         }
+    }
+
+    public static String removerNaoNumericos(String telefone) {
+        if (telefone == null) return "";
+        return telefone.replaceAll("[^\\d]", "");
     }
 
 }

@@ -7,9 +7,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
+    // Declara variáveis de Classe
     private static final String DB_NAME = "estoque.db";
     private static final int DB_VERSION = 2;
-
     public static final String TABLE_PRODUTO = "produto";
     public static final String TABLE_CLIENTE = "cliente";
 

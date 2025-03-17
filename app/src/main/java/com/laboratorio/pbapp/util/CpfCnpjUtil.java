@@ -65,7 +65,7 @@ public class CpfCnpjUtil {
                     CPF.substring(6, 9),
                     CPF.substring(9, 11));
         }
-        return null;
+        return "";
     }
 
     public static String formatarCnpj(String CNPJ) {
@@ -81,7 +81,7 @@ public class CpfCnpjUtil {
                     CNPJ.substring(8, 12),
                     CNPJ.substring(12, 14));
         }
-        return null;
+        return "";
     }
     public static boolean isCPFouCNPJValido(String documento) {
         if (documento == null) return false;
